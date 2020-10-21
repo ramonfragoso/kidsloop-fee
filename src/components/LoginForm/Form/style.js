@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../theme';
+import { light } from '../../../theme';
 
 export const Container = styled.form`
     display: flex;
@@ -9,15 +9,18 @@ export const Container = styled.form`
 
 export const Input = styled.input`
     border-radius: 12px;
-    border: 1.5px #d1d1d1 solid;
+    border: ${({theme}) => "1.5px " +  theme.border + " solid"};
     padding: 15px;
     margin: 3px 0px;
     font-family: "Circular Std Book", Sans-serif;
+    background-color: ${({theme}) => theme.input}; 
+    color: ${({theme}) => theme.text}; 
+    transition: all 0.30s linear;
     font-size: 100%;
 
     :focus {
         outline: none !important;
-        border: 1.5px solid ${theme.colors.blue};
+        border: 1.5px solid ${light.colors.blue};
         box-shadow: 0 0 10px #719ECE;
     }
 `;
@@ -32,7 +35,7 @@ export const Wrapper = styled.div`
 
 export const ForgotPassword = styled.a`
     font-size: 90%;
-    color: ${theme.colors.navyBlue};    
+    color: ${({theme}) => theme.link}; 
     user-select: none;
     &:hover {
         cursor: pointer;
@@ -42,7 +45,7 @@ export const ForgotPassword = styled.a`
 
 export const Button = styled.button`
     border-radius: 12px;
-    background-color: ${theme.colors.blue};
+    background-color: ${light.colors.blue};
     border: none;
     color: white;
     padding: 8px;
@@ -50,7 +53,7 @@ export const Button = styled.button`
     font-family: "Circular Std Book", Sans-serif;
     :focus {
         outline: none !important;
-        border: 1.5px solid ${theme.colors.blue};
+        border: 1.5px solid ${light.colors.blue};
         box-shadow: 0 0 10px #719ECE;
     }
 `;

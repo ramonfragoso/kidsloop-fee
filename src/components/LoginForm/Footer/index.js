@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container,Config, Info, Sun, Link, Select } from './style';
-import theme from '../../../theme';
+import {light} from '../../../theme';
 
-function Footer() {
+function Footer({theme,setTheme}) {
+
     return (
         <Container>
             <Config>
-                <Sun fill={theme.colors.navyBlue}/>
+                <Sun fill={theme==='light' ? "#043c7c" : "#C5E9FB" } onClick={() => theme==='light' ? setTheme("dark") : setTheme("light")}/>
                 <div>
                     <Select>
                         <option value="" disabled selected>Select language</option>

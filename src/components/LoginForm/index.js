@@ -3,7 +3,7 @@ import { Container, Box, Logo, Title, LinkWrapper, Link } from './style';
 import Footer from './Footer';
 import Form from './Form';
 
-function LoginForm() {
+function LoginForm({theme,setTheme}) {
     return (
         <Container>
             <Box>
@@ -14,7 +14,7 @@ function LoginForm() {
                     <Link>Create an account</Link>
                 </LinkWrapper>
             </Box>
-            <Footer/>
+            <Footer theme={theme} setTheme={setTheme}/>
         </Container>
     )
 }

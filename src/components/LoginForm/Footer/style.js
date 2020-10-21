@@ -27,6 +27,7 @@ export const Sun = styled(SunSVG)`
 export const Link = styled.div`
     font-size: 80%;
     margin: 0px 5px;
+    color: ${({theme}) => theme.link}; 
 
     &:hover {
         text-decoration: underline;
@@ -42,7 +43,9 @@ export const Info = styled.div`
 export const Select = styled.select`
     top: 5px;
     border: none;
-    background-color: white;
+    background-color: ${({theme}) => theme.body};
+    transition: all 0.30s linear;
+    color: ${({theme}) => theme.link}; 
     text-decoration: underline;
     font-family: "Circular Std Book", Sans-serif;
 
