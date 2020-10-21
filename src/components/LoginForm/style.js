@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {ReactComponent as SVGLogo} from '../../assets/logo.svg';
+// import {ReactComponent as SVGLogo} from '../../assets/logo.svg';
 import { light } from '../../theme';
 
 export const Container = styled.div`
@@ -15,9 +15,9 @@ export const Box = styled.div`
     transition: all 0.30s linear;
 `;
 
-export const Logo = styled(SVGLogo)`
+export const Logo = styled.img`
     width: 80px;
-    height: 80px;
+    margin-bottom: 10px;
 `;
 
 export const Title = styled.div`

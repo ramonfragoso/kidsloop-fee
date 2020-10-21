@@ -7,7 +7,7 @@ function LoginForm({theme,setTheme}) {
     return (
         <Container>
             <Box>
-                <Logo/>
+                <Logo src={require("../../assets/logo.png")}/>
                 <Title>Sign In</Title>
                 <Form/>
                 <LinkWrapper>
