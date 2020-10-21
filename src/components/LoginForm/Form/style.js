@@ -4,6 +4,7 @@ import theme from '../../../theme';
 export const Container = styled.form`
     display: flex;
     flex-direction: column;
+
 `;
 
 export const Input = styled.input`
@@ -21,7 +22,7 @@ export const Input = styled.input`
     }
 `;
 
-export const Wrapper = styled.form`
+export const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;

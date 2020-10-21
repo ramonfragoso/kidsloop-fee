@@ -1,15 +1,20 @@
 import React from 'react';
 import { Container, Input, Wrapper, ForgotPassword, Button } from './style';
 function Form() {
+
+    const submit = () => {
+        alert("Logged In!");
+    }
+
     return (
-        <Container>
-                <Input placeholder="Email or phone *"/>
-                <Input placeholder="Password *"/>
+        <Container onSubmit={submit}>
+                <Input placeholder="Email or phone *" type="email" required/>
+                <Input placeholder="Password *" type="password" required/>
                 <Wrapper>
                     <ForgotPassword>
                         Forgot Password?
                     </ForgotPassword>
-                    <Button>Sign In</Button>
+                    <Button type="submit">Sign In</Button>
                 </Wrapper>
         </Container>
     )

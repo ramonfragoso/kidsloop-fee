@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Box, Logo, Title, LinkWrapper, Link } from './style';
-import Header from './Header';
+import Footer from './Footer';
 import Form from './Form';
 
 function LoginForm() {
@@ -14,7 +14,7 @@ function LoginForm() {
                     <Link>Create an account</Link>
                 </LinkWrapper>
             </Box>
-            <Header/>
+            <Footer/>
         </Container>
     )
 }
